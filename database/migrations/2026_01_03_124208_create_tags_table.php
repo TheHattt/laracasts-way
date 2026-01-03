@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Job;
+use App\Models\Post;
 use App\Models\Tag;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -26,6 +27,9 @@ return new class extends Migration
               $table->foreignIdFor(Tag::class)->constrained()->cascadeOnDelete();
               $table->timestamps();
         });
+
+
+
     }
 
 
