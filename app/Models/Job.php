@@ -17,4 +17,11 @@ class Job extends  Model
     return $this->belongsTo(Employer::class);
  }
 
+
+ public function tags()
+ {
+     /*many-to-many relationship */
+    return $this->belongsToMany(Tag::class, foreignPivotKey: 'job_listings_id');
+ }
+
 }
