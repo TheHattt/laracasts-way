@@ -15,8 +15,8 @@ return new class extends Migration
         Schema::create('job_listings', function (Blueprint $table) {
             $table->id();
             // foreign key to employers_id  table
-           // $table-> foreignId('employer_id')->constrained('employers')->onDelete('cascade');
-            $table -> foreignIdFor(Employer::class);
+            // $table-> foreignId('employer_id')->constrained('employers')->onDelete('cascade');
+            $table->foreignIdFor(Employer::class);
             $table->string('title');
             $table->string('salary');
             $table->timestamps();

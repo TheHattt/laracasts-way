@@ -14,7 +14,7 @@
 </head>
 <body class="text-gray-800">
 
-<nav class="bg-slate-50 border-b border-gray-200">
+<nav class="bg-zinc-400 border-b border-gray-200 ">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between h-16">
       <div class="flex items-center ">
@@ -38,11 +38,12 @@
 </nav>
 
 <header>
-    <div>
-        <div class="max-w-7xl mx-auto py-6  ">
-        <h1 class="text-2xl font-semibold text-gray-900">
+    <div class="bg-white border-b-2 mb-8 ">
+        <div class="max-w-7xl mx-auto py-6 flex justify-between items-center px-4 sm:px-6 lg:px-8">
+        <h1 class="text-3xl  font-semibold text-gray-900 ">
             {{ $heading }}
         </h1>
+          <x-button href="/jobs/create">Create Job</x-button>
         </div>
     </div>
 </header>

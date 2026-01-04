@@ -10,15 +10,15 @@ class Tag extends Model
     /** @use HasFactory<\Database\Factories\TagFactory> */
     use HasFactory;
 
+    public function jobs()
+    {
+        /* many-to-many relationship */
+        return $this->belongsToMany(Job::class, relatedPivotKey: 'job_listings_id');
+    }
 
-public function jobs(){
-    /*many-to-many relationship */
-   return $this->belongsToMany(Job::class, relatedPivotKey: 'job_listings_id');
-}
-
-public function posts()
-{
-    /*many-to-many relationship */
-    return $this->belongsToMany(Post::class, relatedPivotKey: 'post_id');
-}
+    public function posts()
+    {
+        /* many-to-many relationship */
+        return $this->belongsToMany(Post::class, relatedPivotKey: 'post_id');
+    }
 }

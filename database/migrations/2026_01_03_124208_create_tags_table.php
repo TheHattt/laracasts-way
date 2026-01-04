@@ -20,20 +20,15 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        /*pivot table linking a tag and a post */
+        /* pivot table linking a tag and a post */
         Schema::create('job_tag', function (Blueprint $table) {
-              $table->id();
-              $table->foreignIdFor(Job::class, 'job_listings_id')->constrained()->cascadeOnDelete();
-              $table->foreignIdFor(Tag::class)->constrained()->cascadeOnDelete();
-              $table->timestamps();
+            $table->id();
+            $table->foreignIdFor(Job::class, 'job_listings_id')->constrained()->cascadeOnDelete();
+            $table->foreignIdFor(Tag::class)->constrained()->cascadeOnDelete();
+            $table->timestamps();
         });
 
-
-
     }
-
-
-
 
     /**
      * Reverse the migrations.

@@ -14,10 +14,10 @@ class Post extends Model
         'title',
         'content',
     ];
-public function tags()
+
+    public function tags()
     {
-        /*many-to-many relationship */
+        /* many-to-many relationship */
         return $this->belongsToMany(Tag::class);
     }
-
 }
