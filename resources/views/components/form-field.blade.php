@@ -1,1 +1,3 @@
-<?php
+<div>
+    {{$slot}}
+</div>
