@@ -26,16 +26,6 @@
             <p class="text-xs text-red-600">{{$message}} </p>
             @enderror
         </div>
-{{--
-        @if($errors->any())
-        <div class=" border-red-400 text-red-700 px-4 py-3 rounded relative">
-            <ul class="mt-2 list-disc list-inside list-none ">
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-        @endif--}}
 
         <div class=" space-x-4 flex justify-end">
             <button type="submit" class="px-4 py-2 border bg-gray-200 text-gray-700 rounded-md  ">Cancel</button>
