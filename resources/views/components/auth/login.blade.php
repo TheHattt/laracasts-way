@@ -8,7 +8,7 @@
 
     <div>
         <x-form-label for="email"> Email </x-form-label>
-        <x-form-input type="email" name="email" id="email" placeholder="info@laravel.com" required />
+        <x-form-input type="email" name="email" id="email" placeholder="info@laravel.com" :value="old('email')" required />
         <x-form-errors name="email" />
     </div>
         <div>
