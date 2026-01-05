@@ -15,4 +15,8 @@ class Employer extends Model
         /* Employer has many jobs -> means job has the FK */
         return $this->hasMany(Job::class);
     }
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }

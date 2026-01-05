@@ -9,5 +9,9 @@
         <a href="/jobs" class="text-blue-500  mt-4 inline-block">Back to Jobs Listing</a>
     </div>
 
-    <x-button href="/jobs/{{$job->id}}/edit" class="mt-6">Edit Job</x-button>
+    @can('edit-job', $job)
+        <p class="mt-6">
+            <x-button href="/jobs/{{$job->id}}/edit">Edit Job</x-button>
+        </p>
+    @endcan
 </x-layout>
