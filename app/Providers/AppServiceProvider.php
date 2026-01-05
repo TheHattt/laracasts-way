@@ -25,12 +25,8 @@ class AppServiceProvider extends ServiceProvider
     {
         Model::preventLazyLoading(! $this->app->isProduction());
 
-      /*  Gate::define('edit-job', function (User $user, Job $job) {
-        });*/
-
+        /*  Gate::define('edit-job', function (User $user, Job $job) {
+          });*/
 
     }
-
-
-
 }

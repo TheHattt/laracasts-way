@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Mail\JobPosted;
 use App\Models\Job;
-use App\Models\User;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Mail;
 
@@ -41,7 +39,8 @@ class JobController extends Controller
 
         // mail notification to user
 
-        Mail::to( $job->employer->user)->send(new JobPosted($job));
+        Mail::to($job->employer->user)->queue(new JobPosted($job));
+
         return redirect('/jobs');
     }
 
@@ -75,9 +74,9 @@ class JobController extends Controller
 
     public function edit(Job $job)
     {
-/*        if(Auth::user()->cannot('edit-job', $job)) {
-            dd(" You are not authorized to edit this job ");
-        }*/
+        /*        if(Auth::user()->cannot('edit-job', $job)) {
+                    dd(" You are not authorized to edit this job ");
+                }*/
 
         Gate::authorize('edit-job', $job);
 

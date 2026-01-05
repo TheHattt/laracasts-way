@@ -4,7 +4,6 @@ namespace App\Policies;
 
 use App\Models\Job;
 use App\Models\User;
-use Illuminate\Auth\Access\Response;
 
 class JobPolicy
 {
@@ -37,7 +36,7 @@ class JobPolicy
      */
     public function update(User $user, Job $job): bool
     {
-        return false ;
+        return false;
     }
 
     /**
@@ -63,7 +62,6 @@ class JobPolicy
     {
         return false;
     }
-
 
     public function editApplications(User $user, Job $job): bool
     {
